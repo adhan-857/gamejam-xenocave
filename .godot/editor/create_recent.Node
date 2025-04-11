@@ -1,0 +1,14 @@
+AnimatedSprite2D
+CharacterBody2D
+AudioStreamPlayer2D
+AudioStreamPlayer3D
+AudioListener2D
+Label
+Camera2D
+LinkButton
+TextureRect
+Node2D
+AnimationPlayer
+TileMap
+MenuButton
+ColorRect

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6qjuncforvun"
+path="res://.godot/imported/ShadowsAndDust-chosic.com_.mp3-29ac1f548bfd2e8f0982d2e001e9984d.mp3str"
+
+[deps]
+
+source_file="res://assets/Music by Scott Buckley/ShadowsAndDust-chosic.com_.mp3"
+dest_files=["res://.godot/imported/ShadowsAndDust-chosic.com_.mp3-29ac1f548bfd2e8f0982d2e001e9984d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

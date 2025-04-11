@@ -1,0 +1,142 @@
+[gd_scene load_steps=21 format=3 uid="uid://dhn0fq4ypd1p2"]
+
+[ext_resource type="Texture2D" uid="uid://r38o2icqf1mx" path="res://assets/DARK Edition/Animated objects/Door/door open 41x48.png" id="1_ovwhl"]
+[ext_resource type="Script" path="res://script/door.gd" id="1_vyg7l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hjno"]
+size = Vector2(6, 9)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hgkgk"]
+size = Vector2(7, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smx5g"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(0, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au5ir"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(41, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi3yl"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(82, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d77w"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(123, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ktmo"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(164, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dcn1"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(205, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgt5l"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(246, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0euh"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(287, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ua1o"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(328, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gks7"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(369, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3d3a"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(410, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5mbw"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(451, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrxu8"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(492, 0, 41, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mppua"]
+atlas = ExtResource("1_ovwhl")
+region = Rect2(533, 0, 41, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vbuwe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smx5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au5ir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi3yl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6d77w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ktmo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dcn1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgt5l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0euh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ua1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gks7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3d3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5mbw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrxu8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mppua")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hggci"]
+size = Vector2(10, 48)
+
+[node name="Door" type="CharacterBody2D"]
+script = ExtResource("1_vyg7l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -19.5)
+shape = SubResource("RectangleShape2D_3hjno")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_hgkgk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vbuwe")
+animation = &"Open"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8, 0)
+shape = SubResource("RectangleShape2D_hggci")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

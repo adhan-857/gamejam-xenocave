@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cyu6hutk7po6i"
+path="res://.godot/imported/Incantation-chosic.com_.mp3-178f64ed5254807906bbde9c416a8fda.mp3str"
+
+[deps]
+
+source_file="res://assets/Music by Scott Buckley/Incantation-chosic.com_.mp3"
+dest_files=["res://.godot/imported/Incantation-chosic.com_.mp3-178f64ed5254807906bbde9c416a8fda.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

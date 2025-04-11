@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfrr1a13e3hhs"
+path="res://.godot/imported/AKindOfHope(chosic.com).mp3-45a65d746cd2ed3af1e9fe75074b397e.mp3str"
+
+[deps]
+
+source_file="res://assets/Music by Scott Buckley/AKindOfHope(chosic.com).mp3"
+dest_files=["res://.godot/imported/AKindOfHope(chosic.com).mp3-45a65d746cd2ed3af1e9fe75074b397e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

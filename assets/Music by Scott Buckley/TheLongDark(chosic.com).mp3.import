@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5h387f5cpywj"
+path="res://.godot/imported/TheLongDark(chosic.com).mp3-c79d89d0eb9843e56c5c2aa8da072391.mp3str"
+
+[deps]
+
+source_file="res://assets/Music by Scott Buckley/TheLongDark(chosic.com).mp3"
+dest_files=["res://.godot/imported/TheLongDark(chosic.com).mp3-c79d89d0eb9843e56c5c2aa8da072391.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

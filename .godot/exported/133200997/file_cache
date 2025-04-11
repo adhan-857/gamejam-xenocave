@@ -1,0 +1,16 @@
+res://scenes/Boss.tscn::736118a11718805aef992e450d578449::1744408502::res://.godot/exported/133200997/export-3afb77140cdc0a8456d3f279d0154dda-Boss.scn
+res://scenes/Door.tscn::b8f989585fd6ab9edfa1d025d75cb412::1744408501::res://.godot/exported/133200997/export-11164a5fbac7f68003d4e997c566fb6b-Door.scn
+res://scenes/Flower.tscn::73ea0519fb8434cf9554a566cd64a9f8::1744408502::res://.godot/exported/133200997/export-d4e004d51a546fd80d7d3ead5db81d33-Flower.scn
+res://scenes/Level1.tscn::3cab31342980f59bed4239c470149dfb::1744408501::res://.godot/exported/133200997/export-deabe38036185c247ba87cb4424f16cd-Level1.scn
+res://scenes/Player.tscn::fa0622888dff823020fac2d4faf06627::1744408501::res://.godot/exported/133200997/export-e8220e74d1354b9e6b168b513689419c-Player.scn
+res://scenes/PortalFinish.tscn::661d09045cbcced7df90775c40a35107::1744408502::res://.godot/exported/133200997/export-e014c4fd36003791721117e1efb4c671-PortalFinish.scn
+res://scenes/PortalReceive.tscn::39680eb59b0d133f6fffd314e7a20676::1744408501::res://.godot/exported/133200997/export-be35b562a99bc4cfabb5493f1f8b859f-PortalReceive.scn
+res://scenes/PortalSend.tscn::1b11ee1baa5206b37aedadc41865e01e::1744408501::res://.godot/exported/133200997/export-437a41e61c178c65acfd22c3db4fc9db-PortalSend.scn
+res://scenes/MainMenu.tscn::b3fe933540e2603a4c165f9f4fcce381::1744408502::res://.godot/exported/133200997/export-23c8b2a48d59a0cd018bd8ad5ce7794c-MainMenu.scn
+res://scenes/WinScreen.tscn::66dd3e81d673916064824be9bb0563fb::1744408502::res://.godot/exported/133200997/export-e0b1c42f693a0f5f31acbbd7c07c1c93-WinScreen.scn
+res://scenes/Spider.tscn::39f1c35adc0e1ebcd6200432ffad8687::1744408501::res://.godot/exported/133200997/export-7b0d1625bb7dda6a25d8daed2413e973-Spider.scn
+res://scenes/TopBar.tscn::750f2320488665af23aba08facf7727e::1744408502::res://.godot/exported/133200997/export-bb6e9ff6bda7f53a88a228f8bfa9ba0a-TopBar.scn
+res://scenes/TroopBot.tscn::5b4f834bae3287360fa30d20e3739807::1744408502::res://.godot/exported/133200997/export-617e3237a343a1f67d4718fe4684570a-TroopBot.scn
+res://default_env.tres::98e9cc9f9d0be5168dae9e8a28c1e9a9::1744408503::res://.godot/exported/133200997/export-7cf3fd67ad9f55210191d77b582b8209-default_env.res
+res://scenes/LoseScreen.tscn::b7704bc0375b2be8bd7f62d15532b9de::1744408502::res://.godot/exported/133200997/export-2d0a2ede07eaf71d9218c7029f545b48-LoseScreen.scn
+res://scenes/CoverPage.tscn::f7187de34da335e36fbd3be9fd37356b::1744408502::res://.godot/exported/133200997/export-fc932df7d6f65877640c52e95d117dab-CoverPage.scn

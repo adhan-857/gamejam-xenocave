@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1ocglpjo4att"]
+
+[ext_resource type="Script" path="res://script/top_bar.gd" id="1_cdgv6"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cdgv6")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 0
+offset_left = 203.0
+offset_top = -8.0
+offset_right = 319.0
+offset_bottom = 32.0
+scale = Vector2(0.904762, 0.807453)
+
+[node name="Label" type="Label" parent="Control/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Fuel:"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control"]
+clip_contents = true
+layout_mode = 0
+offset_left = 226.0
+offset_top = 3.0
+offset_right = 326.0
+offset_bottom = 30.0
+scale = Vector2(0.924623, 0.640777)
+
+[node name="FuelBar" type="ProgressBar" parent="Control/MarginContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+rounded = true
+
+[node name="MarginContainer3" type="MarginContainer" parent="Control"]
+layout_mode = 0
+offset_left = 2.00002
+offset_top = -8.0
+offset_right = 118.0
+offset_bottom = 32.0
+scale = Vector2(0.904762, 0.807453)
+
+[node name="Label" type="Label" parent="Control/MarginContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Health:"
+
+[node name="MarginContainer4" type="MarginContainer" parent="Control"]
+clip_contents = true
+layout_mode = 0
+offset_left = 36.0
+offset_top = 3.0
+offset_right = 136.0
+offset_bottom = 30.0
+scale = Vector2(0.924623, 0.640777)
+
+[node name="HealthBar" type="ProgressBar" parent="Control/MarginContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+rounded = true
