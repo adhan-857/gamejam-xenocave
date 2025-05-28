@@ -1,7 +1,8 @@
-[gd_scene load_steps=38 format=3 uid="uid://bl74mke8aqrkp"]
+[gd_scene load_steps=39 format=3 uid="uid://bl74mke8aqrkp"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_5qyn1"]
 [ext_resource type="Texture2D" uid="uid://dwm8mtefw78k" path="res://assets/DARK Edition/Sprites/flame dude dark 94x64.png" id="2_4cmui"]
+[ext_resource type="Script" path="res://script/camera.gd" id="3_joqtv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubdpg"]
 size = Vector2(20, 25)
@@ -198,7 +199,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Hurt",
-"speed": 5.0
+"speed": 3.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -275,6 +276,7 @@ offset = Vector2(45, -30)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 rotation_smoothing_speed = 3.0
+script = ExtResource("3_joqtv")
 
 [node name="Area2D" type="Area2D" parent="."]
 

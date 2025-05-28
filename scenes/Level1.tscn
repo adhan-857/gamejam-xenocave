@@ -426,10 +426,22 @@ position = Vector2(894, 372)
 [node name="TroopBot" parent="." instance=ExtResource("7_coii3")]
 z_index = 2
 position = Vector2(1366, 471)
+speed = 50.0
+detection_range = 200.0
+gravity = 980.0
+damage_amount = 2
+damage_cooldown = 1.5
+max_hit_points = 2
 
 [node name="TroopBot2" parent="." instance=ExtResource("7_coii3")]
 z_index = 2
 position = Vector2(1120, 407)
+speed = 50.0
+detection_range = 200.0
+gravity = 980.0
+damage_amount = 2
+damage_cooldown = 1.5
+max_hit_points = 2
 
 [node name="Spider" parent="." instance=ExtResource("4_fsphv")]
 z_index = 2
@@ -461,6 +473,12 @@ position = Vector2(1665, 407)
 [node name="TroopBot3" parent="." instance=ExtResource("7_coii3")]
 z_index = 2
 position = Vector2(1604, 471)
+speed = 50.0
+detection_range = 200.0
+gravity = 980.0
+damage_amount = 2
+damage_cooldown = 1.5
+max_hit_points = 2
 
 [node name="Boss" parent="." instance=ExtResource("10_6j2t1")]
 position = Vector2(1969, 465)

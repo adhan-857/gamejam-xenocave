@@ -9,8 +9,7 @@ var max_fuel = 100
 var fuel_regeneration_rate = 0.75  # Fuel points per second
 
 var boss_defeated = false
-# Reference to the player node
-var player = null
+var main_camera = null  # Referensi ke kamera utama
 
 func reset_game_state():
 	health = max_health
@@ -29,23 +28,20 @@ func regenerate_fuel(delta):
 func regenerate_health(delta):
 	if health < max_health:
 		health = min(health + health_regeneration_rate * delta, max_health)
-		
+
+# Modified to include camera shake		
 func take_damage(amount):
 	health = max(0, health - amount)
 	
-	# Try to get the player if we don't have a reference yet
-	if player == null:
-		player = get_tree().get_first_node_in_group("player")
-	
-	# Trigger player hurt animation if player reference exists
-	if player != null and player.has_method("play_hurt_animation"):
-		player.play_hurt_animation()
+	# Trigger camera shake if camera reference exists
+	if main_camera != null and main_camera.has_method("shake"):
+		# Parameter: durasi shake (detik), kekuatan shake
+		main_camera.shake(0.2, 3.0)
 	
 	if health <= 0:
 		# Add a slight delay before changing scenes
 		await get_tree().create_timer(0.5).timeout
 		get_tree().change_scene_to_file("res://scenes/LoseScreen.tscn")
-	
 	return health > 0  # Returns true if player is still alive
 
 func heal(amount):

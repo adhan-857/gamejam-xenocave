@@ -21,7 +21,6 @@ var was_in_air = false
 var is_firing = false
 var attack_active_timer = 0.0
 var fire_sound: AudioStreamPlayer
-var is_hurt = false  # Flag untuk melacak apakah sedang dalam animasi hurt
 
 func _ready():
 	last_press_time["ui_left"] = 0
@@ -47,18 +46,11 @@ func _ready():
 	fire_sound.volume_db = -15
 	add_child(fire_sound)
 	
-	# Add player to a group for easy access from Global
-	add_to_group("player")
-	
-	# Register player in Global
-	Global.player = self
+	var camera = $Camera2D
+	if camera and Global:
+		Global.main_camera = camera
 
 func _physics_process(delta):
-	# Jika sedang dalam animasi hurt, skip input handling
-	if is_hurt:
-		move_and_slide()
-		return
-		
 	var move_dir = 0
 	var current_time = Time.get_ticks_msec() / 1000.0
 	
@@ -159,28 +151,6 @@ func _physics_process(delta):
 	# Apply gravity dan gerak
 	move_and_slide()
 
-# Fungsi untuk menerima damage langsung dari collision/enemy
-func take_damage(amount: int, source_position: Vector2 = Vector2.ZERO):
-	# Jika sedang hurt, abaikan damage baru
-	if is_hurt:
-		return
-	
-	# Panggil Global.take_damage
-	Global.take_damage(amount)
-	
-	# Play hurt animation (will be called from Global as well)
-	play_hurt_animation()
-
-# New function to play hurt animation - can be called from Global
-func play_hurt_animation():
-	# Jika sedang hurt, abaikan
-	if is_hurt:
-		return
-		
-	# Set hurt state dan play hurt animation
-	is_hurt = true
-	anim_set("Hurt")
-
 # New function - check for enemies in the attack area
 func _on_attack_area_body_entered(body: Node2D) -> void:
 	var name = body.name.to_lower()
@@ -206,22 +176,10 @@ func _on_animation_finished():
 			anim_set("Walk")
 		else:
 			anim_set("Idle")
-	
-	# Cek apakah animasi Hurt sudah selesai
-	elif is_hurt and animplayer.animation == "Hurt":
-		is_hurt = false
-		
-		# Pilih animasi yang tepat setelah Hurt selesai
-		if not is_on_floor():
-			anim_set("jump")
-		elif Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
-			anim_set("Walk")
-		else:
-			anim_set("Idle")
 
 func start_dash(direction):
-	# Prevent dashing during firing or hurt
-	if is_firing or is_hurt:
+	# Prevent dashing during firing
+	if is_firing:
 		return
 		
 	is_dashing = true
