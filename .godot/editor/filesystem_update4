@@ -18,3 +18,5 @@ res://script/boss.gd
 res://script/flower.gd
 res://script/spider.gd
 res://script/troop_bot.gd
+res://script/player.gd
+res://script/global.gd

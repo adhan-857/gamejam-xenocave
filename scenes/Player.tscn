@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bl74mke8aqrkp"]
+[gd_scene load_steps=38 format=3 uid="uid://bl74mke8aqrkp"]
 
 [ext_resource type="Script" path="res://script/player.gd" id="1_5qyn1"]
 [ext_resource type="Texture2D" uid="uid://dwm8mtefw78k" path="res://assets/DARK Edition/Sprites/flame dude dark 94x64.png" id="2_4cmui"]
@@ -69,6 +69,14 @@ region = Rect2(0, 128, 94, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_aqmbw"]
 atlas = ExtResource("2_4cmui")
 region = Rect2(0, 0, 94, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8570"]
+atlas = ExtResource("2_4cmui")
+region = Rect2(0, 256, 47, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy7sa"]
+atlas = ExtResource("2_4cmui")
+region = Rect2(94, 256, 47, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_82ex4"]
 atlas = ExtResource("2_4cmui")
@@ -183,6 +191,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_a8570")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy7sa")
+}],
+"loop": false,
+"name": &"Hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_82ex4")
 }, {
 "duration": 1.0,
@@ -246,9 +265,9 @@ shape = SubResource("RectangleShape2D_ubdpg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_otr8u")
-animation = &"Fire"
+animation = &"Hurt"
 autoplay = "Idle"
-frame = 15
+frame = 1
 frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
