@@ -253,6 +253,9 @@ frame_progress = 1.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(45, -30)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
 
 [node name="Area2D" type="Area2D" parent="."]
 

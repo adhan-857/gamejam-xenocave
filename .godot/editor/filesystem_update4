@@ -1,5 +1,4 @@
 res://default_env.tres
-res://scenes/WinScreen.tscn
 res://scenes/Player.tscn
 res://scenes/Level1.tscn
 res://scenes/Door.tscn
@@ -13,13 +12,5 @@ res://scenes/Boss.tscn
 res://scenes/PortalFinish.tscn
 res://scenes/MainMenu.tscn
 res://scenes/LoseScreen.tscn
-res://script/global.gd
-res://script/portal.gd
-res://script/door.gd
-res://script/player.gd
-res://script/flower.gd
-res://script/spider.gd
-res://script/troop_bot.gd
-res://script/boss.gd
+res://scenes/WinScreen.tscn
 res://scenes/CoverPage.tscn
-res://script/link_button.gd
