@@ -125,6 +125,7 @@ func _physics_process(delta):
 
 # Called when spider is hit by player's attack
 func die():
+		
 	if is_dying:
 		return  # Prevent multiple death calls
 		
@@ -137,6 +138,7 @@ func die():
 	area_shape.set_deferred("disabled", true)
 	
 	# Play death animation if it exists
+	
 	if animplayer.sprite_frames.has_animation("Death"):
 		animplayer.play("Death")
 	else:

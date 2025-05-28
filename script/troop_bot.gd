@@ -168,6 +168,7 @@ func _physics_process(delta):
 func die():
 	# Reduce hit points when hit
 	hit_points -= 1
+	animplayer.play("Hurt")
 	print("TroopBot hit! Hit points remaining: ", hit_points)
 	
 	# Only die if hit points are depleted
@@ -193,7 +194,7 @@ func die():
 		
 		# The actual death animation will play when the timer runs out
 	else:
-		# Optional: play a "hit" animation or flash effect to show damage
+		animplayer.play("Hurt")
 		print("TroopBot was hit but survived")
 
 # Handle animation finished

@@ -1,10 +1,11 @@
-[gd_scene load_steps=41 format=3 uid="uid://b3i5f417t8uon"]
+[gd_scene load_steps=44 format=3 uid="uid://b3i5f417t8uon"]
 
 [ext_resource type="Script" path="res://script/boss.gd" id="1_ebn48"]
 [ext_resource type="Texture2D" uid="uid://cqwmqeeioejsa" path="res://assets/DARK Edition/Sprites/Hell Bot DARK/run 92x36.png" id="1_vw2da"]
 [ext_resource type="Texture2D" uid="uid://cqtaj86v2hdys" path="res://assets/DARK Edition/Sprites/Hell Bot DARK/idle 92x36.png" id="2_ttw06"]
 [ext_resource type="Texture2D" uid="uid://bjgbadrtvie7b" path="res://assets/DARK Edition/Sprites/Hell Bot DARK/attack 92x36.png" id="3_kyd17"]
 [ext_resource type="Texture2D" uid="uid://btbdriq7s23x5" path="res://assets/DARK Edition/Sprites/Hell Bot DARK/death 92x36.png" id="3_x2ths"]
+[ext_resource type="Texture2D" uid="uid://bm4b824qfitn2" path="res://assets/DARK Edition/Sprites/Hell Bot DARK/hit 92x36.png" id="4_skq76"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xysm"]
 bg_color = Color(0.131867, 0.318267, 0.137315, 1)
@@ -35,6 +36,14 @@ region = Rect2(0, 144, 46, 36)
 [sub_resource type="AtlasTexture" id="AtlasTexture_8r6pi"]
 atlas = ExtResource("3_kyd17")
 region = Rect2(0, 180, 46, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64ab7"]
+atlas = ExtResource("4_skq76")
+region = Rect2(0, 0, 46, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_si67a"]
+atlas = ExtResource("4_skq76")
+region = Rect2(0, 36, 46, 36)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g81uw"]
 atlas = ExtResource("3_x2ths")
@@ -163,6 +172,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_64ab7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si67a")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_g81uw")
 }, {
 "duration": 1.0,
@@ -197,7 +212,18 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
-"speed": 3.0
+"speed": 3.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64ab7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_si67a")
+}],
+"loop": false,
+"name": &"Hurt",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -273,7 +299,7 @@ shape = SubResource("RectangleShape2D_uck7s")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4lr14")
-animation = &"Attack"
+animation = &"Death"
 autoplay = "idle"
 
 [node name="Area2D" type="Area2D" parent="."]

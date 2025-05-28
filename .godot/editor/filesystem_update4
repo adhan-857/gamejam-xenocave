@@ -14,3 +14,7 @@ res://scenes/MainMenu.tscn
 res://scenes/LoseScreen.tscn
 res://scenes/WinScreen.tscn
 res://scenes/CoverPage.tscn
+res://script/boss.gd
+res://script/flower.gd
+res://script/spider.gd
+res://script/troop_bot.gd

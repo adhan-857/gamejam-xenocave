@@ -71,6 +71,9 @@ func _physics_process(delta: float) -> void:
 
 # Called when Flower is hit by player's attack
 func die():
+	if anim_player.sprite_frames.has_animation("Hurt"):
+		anim_player.play("Hurt")
+	
 	if is_dying:
 		return  # Prevent multiple death calls
 		

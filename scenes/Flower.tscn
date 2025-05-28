@@ -1,8 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://c0xy1ltpjdqn"]
+[gd_scene load_steps=33 format=3 uid="uid://c0xy1ltpjdqn"]
 
 [ext_resource type="Script" path="res://script/flower.gd" id="1_lvq6y"]
 [ext_resource type="Texture2D" uid="uid://dk78idrwk77bd" path="res://assets/DARK Edition/Sprites/Flower Enemy/attack 32x32.png" id="2_5q5dx"]
 [ext_resource type="Texture2D" uid="uid://cxcylsf6u1vih" path="res://assets/DARK Edition/Sprites/Flower Enemy/death 32x32.png" id="3_koy3l"]
+[ext_resource type="Texture2D" uid="uid://dqltlaiopd0si" path="res://assets/DARK Edition/Sprites/Flower Enemy/hit 32x32.png" id="4_du8ol"]
 [ext_resource type="Texture2D" uid="uid://cuhpvndfmld7p" path="res://assets/DARK Edition/Sprites/Flower Enemy/move 32x32.png" id="4_qh4hm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lk1nt"]
@@ -55,6 +56,14 @@ region = Rect2(0, 320, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0isbv"]
 atlas = ExtResource("2_5q5dx")
 region = Rect2(0, 352, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdexm"]
+atlas = ExtResource("4_du8ol")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovq15"]
+atlas = ExtResource("4_du8ol")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ib8qd"]
 atlas = ExtResource("3_koy3l")
@@ -137,6 +146,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gdexm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovq15")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ib8qd")
 }, {
 "duration": 1.0,
@@ -150,6 +165,17 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gdexm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovq15")
+}],
+"loop": false,
+"name": &"Hurt",
 "speed": 5.0
 }, {
 "frames": [{
@@ -188,9 +214,8 @@ shape = SubResource("RectangleShape2D_lk1nt")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_bn8l8")
-animation = &"Attack"
+animation = &"Death"
 autoplay = "Idle"
-frame_progress = 0.0558691
 
 [node name="Area2D" type="Area2D" parent="."]
 

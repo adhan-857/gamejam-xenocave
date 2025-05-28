@@ -172,6 +172,7 @@ func _physics_process(delta):
 func die():
 	# Reduce hit points when hit
 	hit_points -= 1
+	animplayer.play("Hurt")
 	print("Boss hit! Hit points remaining: ", hit_points)
 
 	# Update boss bar

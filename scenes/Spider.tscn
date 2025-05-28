@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://f8mkpusko6fm"]
+[gd_scene load_steps=34 format=3 uid="uid://f8mkpusko6fm"]
 
 [ext_resource type="Script" path="res://script/spider.gd" id="1_08cs3"]
 [ext_resource type="Texture2D" uid="uid://b0bukukj5vay0" path="res://assets/DARK Edition/Sprites/Blinding Spider/walk 16x16.png" id="2_w3klo"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://butgwjxjw0026" path="res://assets/DARK Edition/Sprites/Blinding Spider/blind attack 16x16.png" id="4_5aea8"]
 [ext_resource type="Texture2D" uid="uid://dg2ilu2h7w74b" path="res://assets/DARK Edition/Sprites/Blinding Spider/deah 16x16.png" id="4_hwfd8"]
 [ext_resource type="Texture2D" uid="uid://cny8ct2gqvw20" path="res://assets/DARK Edition/Sprites/Blinding Spider/static idle.png" id="5_w7344"]
+[ext_resource type="Texture2D" uid="uid://desuk3apb0w6" path="res://assets/DARK Edition/Sprites/Blinding Spider/damaged 16x16.png" id="5_xtuih"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oeqxn"]
 size = Vector2(9.33333, 8)
@@ -37,6 +38,14 @@ region = Rect2(0, 32, 16, 16)
 [sub_resource type="AtlasTexture" id="AtlasTexture_s1q8s"]
 atlas = ExtResource("4_5aea8")
 region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuaj3"]
+atlas = ExtResource("5_xtuih")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnuor"]
+atlas = ExtResource("5_xtuih")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8slqo"]
 atlas = ExtResource("4_hwfd8")
@@ -120,6 +129,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_wuaj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnuor")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_8slqo")
 }, {
 "duration": 1.0,
@@ -139,6 +154,17 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuaj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnuor")
+}],
+"loop": false,
+"name": &"Hurt",
 "speed": 5.0
 }, {
 "frames": [{
@@ -190,8 +216,6 @@ shape = SubResource("RectangleShape2D_oeqxn")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_sjprh")
 animation = &"Death"
-frame = 5
-frame_progress = 1.0
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="."]
