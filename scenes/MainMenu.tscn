@@ -324,8 +324,11 @@ offset_left = 127.0
 offset_top = 104.0
 offset_right = 193.0
 offset_bottom = 144.0
+theme_override_colors/font_pressed_color = Color(0.670588, 0.670588, 0.670588, 1)
+theme_override_colors/font_hover_color = Color(0.670588, 0.670588, 0.670588, 1)
 theme_override_font_sizes/font_size = 12
 text = "Start Game"
+underline = 2
 script = ExtResource("3_o4tb4")
 
 [node name="LinkButton2" type="LinkButton" parent="."]
@@ -333,8 +336,11 @@ offset_left = 147.0
 offset_top = 127.0
 offset_right = 213.0
 offset_bottom = 167.0
+theme_override_colors/font_pressed_color = Color(0.67069, 0.67069, 0.67069, 1)
+theme_override_colors/font_hover_color = Color(0.670588, 0.670588, 0.670588, 1)
 theme_override_font_sizes/font_size = 12
 text = "Exit"
+underline = 2
 script = ExtResource("4_h0kn2")
 
 [node name="PlayerMain" parent="." instance=ExtResource("5_4fa5e")]

@@ -329,8 +329,11 @@ offset_left = 127.0
 offset_top = 127.0
 offset_right = 193.0
 offset_bottom = 167.0
+theme_override_colors/font_pressed_color = Color(0.670588, 0.670588, 0.670588, 1)
+theme_override_colors/font_hover_color = Color(0.670588, 0.670588, 0.670588, 1)
 theme_override_font_sizes/font_size = 12
 text = "Main Menu"
+underline = 2
 script = ExtResource("3_4ncyi")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
